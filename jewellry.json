@@ -1,0 +1,803 @@
+[
+    {
+      "id": 1,
+      "title": "Italian Silver Band Ring",
+      "metal":"sliver",
+      "size":[6,6.5,7,8],
+      "weight":9,
+      "price":149,
+      "img":"https://nidatabba.com/_content/Library/img/products/NT402101-1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Signature Silver Rope Bangle",
+        "metal":"sliver",
+        "size":[6,5],
+        "weight":14,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402045-1.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Signature Silver Beads & White Stones Bangle",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":29,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402047-1.jpg"
+    },
+    {
+        "id":4 ,
+        "title": "Signature Silver & Turquoise Stone Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":18,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402049-1.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Signature Silver Bells Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":25,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402046-1.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Mexico Geometrical Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":8,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402052-1.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Mexico Paired Bead Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":14.9,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402082-1.jpg"
+    },
+    {
+        "id":8 ,
+        "title": "Mexico 3-Dots Ring",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":11,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402053-1.jpg"
+    },
+    {
+        "id":9 ,
+        "title": "Italian Cutout Hoop Earrings (Rose Gold)",
+        "metal":"sliver",
+        "size":[0.86,1.28],
+        "weight":6,
+        "price":139,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402094-1.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Italian Gold Swirl Hoop Earrings",
+        "metal":"sliver",
+        "size":[0.85,1.20],
+        "weight":6,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402098-1.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Mexico Yin-Yang Ring",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":7,
+        "price":139,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402064-1.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Italian Flower Ring (Rose Gold)",
+        "metal":"sliver",
+        "size":[9],
+        "weight":9,
+        "price":139,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402096-1.jpg"
+    },
+    {
+        "id":13 ,
+        "title": "Mexico Hammered O Ring",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":7,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402084-1.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Mexico Double Hug Ring",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":5,
+        "price":139,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402075-1.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Italian Flower Ring (Silver)",
+        "metal":"sliver",
+        "size":[9],
+        "weight":9,
+        "price":139,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402103-1.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Mexico Hammered Square Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":11.7,
+        "price":139,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402056-1.jpg"
+    },
+    {
+        "id":17 ,
+        "title": "Signature Amethyst Double Anklet - Sunstar stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":8,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402119-1.jpg"
+    },
+    {
+        "id":18 ,
+        "title": "Signature Coral Double Anklet - Garnet stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":11,
+        "price":119,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402111-1.jpg"
+    },
+    {
+        "id": 19,
+        "title": "Signature Coral Double Anklet -Turquoise stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":11,
+        "price":119,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402110-1.jpg"
+    },
+    {
+        "id":20,
+        "title": "Signature Sunstar Double Anklet - Pearl stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":11,
+        "price":119,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402108-1.jpg"
+    },
+    {
+        "id": 21,
+        "title": "Signature Sunstar Double Anklet - Blue stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":11,
+        "price":119,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402043-1.jpg"
+    },
+    {
+        "id":22 ,
+        "title": "Mexico Hug Ring",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":6,
+        "price":119,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402055-1.jpg"
+    },
+    {
+        "id":23 ,
+        "title": "Mexico Wired Ring",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":2,
+        "price":119,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402077-1.jpg"
+    },
+    {
+        "id": 24,
+        "title": "Mexico Breeze Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":8.7,
+        "price":119,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402068-1.jpg"
+    },
+    {
+        "id": 25,
+        "title": "Signature Pearl Single Anklet - Blue Lapis stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":8,
+        "price":99,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402114-1.jpg"
+    },
+    {
+        "id":26 ,
+        "title": "Mexico Link Chain",
+        "metal":"sliver",
+        "size":[],
+        "weight":null,
+        "price":109,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402065-1.jpg"
+    },
+    {
+        "id":27 ,
+        "title": "Signature Pearl Single Anklet- Turquoise stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":8,
+        "price":99,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402113-1.jpg"
+    },
+    {
+        "id":28 ,
+        "title": "Signature Garnet Single Anklet- Sunstar stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":8,
+        "price":99,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402112-1.jpg"
+    },
+    {
+        "id":29 ,
+        "title": "Signature Garnet Single Anklet - Pearl stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":8,
+        "price":99,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402044-1.jpg"
+    },
+    {
+        "id":30 ,
+        "title": "Signature Garnet Single Anklet - Pearl stone",
+        "metal":"sliver",
+        "size":[],
+        "weight":8,
+        "price":99,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402044-1.jpg"
+    },
+    {
+        "id": 31,
+        "title": "Mexico Square Ring",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":5,
+        "price":99,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402070-1.jpg"
+    },
+    {
+        "id": 32,
+        "title": "Italian Dainty Silver Flowers Pendant",
+        "metal":"sliver",
+        "size":[],
+        "weight":null,
+        "price":169,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402088-1.jpg"
+    },
+    {
+        "id": 33,
+        "title": "Mexico Breeze Ring",
+        "metal":"sliver",
+        "size":[6,6.5,7,8],
+        "weight":null,
+        "price":139,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402121-1.jpg"
+    },
+    {
+        "id": 34,
+        "title": "Indus Valley Multani Sun Choker Set",
+        "metal":"sliver",
+        "size":[],
+        "weight":99,
+        "price":750,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402030-1.jpg"
+    },
+    {
+        "id": 35,
+        "title": "Indus Valley Multani Moon Choker Set",
+        "metal":"sliver",
+        "size":[],
+        "weight":92,
+        "price":750,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402024-1.jpg"
+    },
+    {
+        "id": 36,
+        "title": "Indus Valley Multani Bracelet",
+        "metal":"sliver",
+        "size":[],
+        "weight":75,
+        "price":499,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402031-1.jpg"
+    },
+    {
+        "id": 37,
+        "title": "Signature Silver Coins Bib Necklace",
+        "metal":"sliver",
+        "size":[],
+        "weight":102,
+        "price":449,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402042-1.jpg"
+    },
+    {
+        "id": 38,
+        "title": "Mexico Water Drops Cuff",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":49.2,
+        "price":449,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402063-1.jpg"
+    },
+    {
+        "id": 39,
+        "title": "Mexico Hammered Cuff",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":72.9,
+        "price":495,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402069-1.jpg"
+    },
+    {
+        "id": 40,
+        "title": "Indus Valley Garnet & Pearl Jhumka Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":56,
+        "price":495,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402027-1.jpg"
+    },
+    {
+        "id": 41,
+        "title": "Indus Valley Turquoise & Pearl Jhumka Earrings",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":54,
+        "price":495,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402039-1.jpg"
+    },
+    {
+        "id": 42,
+        "title": "Mexico Weave Cuff",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":52.5,
+        "price":475,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402072-1.jpg"
+    },
+    {
+        "id": 43,
+        "title": "Indus Valley Sapphire & Pearl Jhumka Earrings",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":58,
+        "price":495,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402040-1.jpg"
+    },
+    {
+        "id": 44,
+        "title": "Indus Valley Bangles",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":44,
+        "price":395,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402034-1.jpg"
+    },
+    {
+        "id": 45,
+        "title": "Mexico Hug Cuff",
+        "metal":"sliver",
+        "size":[],
+        "weight":57.6,
+        "price":475,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402073-1.jpg"
+    },
+    {
+        "id": 46,
+        "title": "Italian Mesh Cuff - Large",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":25,
+        "price":349,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402087-1.jpg"
+    },
+    {
+        "id": 47,
+        "title": "Indus Valley Silver & Glass Anklet Pair",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":93,
+        "price":349,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402050-1.jpg"
+    },
+    {
+        "id": 48,
+        "title": "Indus Valley Kohistani Jhumka Earrings",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":35,
+        "price":349,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402025-1.jpg"
+    },
+    {
+        "id": 49,
+        "title": "Mexico Bubbles Cuff",
+        "metal":"sliver",
+        "size":[],
+        "weight":32.8,
+        "price":349,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402054-1.jpg"
+    },
+    {
+        "id": 50,
+        "title": "Indus Valley Emerald Jhumka Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":45,
+        "price":349,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402028-1.jpg"
+    },
+    {
+        "id": 51,
+        "title": "Mexico Hammered Links Bracelet",
+        "metal":"sliver",
+        "size":[],
+        "weight":30.8,
+        "price":349,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402080-1.jpg"
+    },
+    {
+        "id": 52,
+        "title": "Italian Dainty Flowers Earrings (Rose Gold)",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":13,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402106-1.jpg"
+    },
+    {
+        "id": 53,
+        "title": "Italian Mesh Cuff - Small",
+        "metal":"sliver",
+        "size":[],
+        "weight":517,
+        "price":299,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402086-1.jpg"
+    },
+    {
+        "id": 54,
+        "title": "Italian Garden Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":9,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402091-1.jpg"
+    },
+    {
+        "id": 55,
+        "title": "Mexico Linear Bead Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":37.9,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402083-1.jpg"
+    },
+    {
+        "id": 56,
+        "title": "Italian Lady Bug Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":10,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402092-1.jpg"
+    },
+    {
+        "id": 57,
+        "title": "Italian Bubbles Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":18,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402090-1.jpg"
+    },
+    {
+        "id": 58,
+        "title": "Italian Flower Earrings (Silver)",
+        "metal":"sliver",
+        "size":[],
+        "weight":12,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402102-1.jpg"
+    },
+    {
+        "id": 59,
+        "title": "Indus Valley Traditional Silver Anklet Pair",
+        "metal":"sliver",
+        "size":[],
+        "weight":45,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402051-1.jpg"
+    },
+    {
+        "id": 60,
+        "title": "Italian Flower Earrings (Rose Gold)",
+        "metal":"sliver",
+        "size":[],
+        "weight":13,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402095-1.jpg"
+    },
+    {
+        "id": 61,
+        "title": "Italian Flower Earrings (Yellow Gold",
+        "metal":"sliver",
+        "size":[],
+        "weight":12,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402093-1.jpg"
+    },
+    {
+        "id": 62,
+        "title": "Italian Flower Pendant with Chain (Rose Gold)",
+        "metal":"sliver",
+        "size":[],
+        "weight":12,
+        "price":249,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402097-1.jpg"
+    },
+    {
+        "id": 63,
+        "title": "Mexico Meteor Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":23.3,
+        "price":225,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402061-1.jpg"
+    },
+    {
+        "id": 64,
+        "title": "Italian Garden Pendant",
+        "metal":"sliver",
+        "size":[],
+        "weight":9,
+        "price":199,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402120-1.jpg"
+    },
+    {
+        "id": 65,
+        "title": "Mexico Twist Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":11.4,
+        "price":199,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402059-1.jpg"
+    },
+    {
+        "id": 66,
+        "title": "Mexico Waves Bangle",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":11.4,
+        "price":199,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402079-1.jpg"
+    },
+    {
+        "id": 67,
+        "title": "Indus Valley Traditional Silver Jhumka Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":28,
+        "price":195,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402035-1.jpg"
+    },
+    {
+        "id": 68,
+        "title": "Mexico Hammered Bullet Drop Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":6,
+        "price":195,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402085-1.jpg"
+    },
+    {
+        "id": 69,
+        "title": "Mexico Pebbles Hoop Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":154,
+        "price":195,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402067-1.jpg"
+    },
+    {
+        "id": 70,
+        "title": "Mexico 2-Pillar Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":17.2,
+        "price":195,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402062-1.jpg"
+    },
+    {
+        "id": 71,
+        "title": "Mexico Bullet Drop Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":6,
+        "price":175,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402071-1.jpg"
+    },
+    {
+        "id": 72,
+        "title": "Mexico Pinball Ring",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":10,
+        "price":175,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402081-1.jpg"
+    },
+    {
+        "id": 73,
+        "title": "Mexico Ball Ring",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":6,
+        "price":175,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402058-1.jpg"
+    },
+    {
+        "id": 74,
+        "title": "Italian Dainty Flowers Pendant (Rose Gold)",
+        "metal":"sliver",
+        "size":[],
+        "weight":6,
+        "price":169,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402100-1.jpg"
+    },
+    {
+        "id": 75,
+        "title": "Mexico Hexagon Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":18.8,
+        "price":159,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402060-1.jpg"
+    },
+    {
+        "id": 76,
+        "title": "Mexico Double Wrap Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":18.7,
+        "price":144,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402076-1.jpg"
+    },
+    {
+        "id": 77,
+        "title": "Signature Silver Beads & Multicolor Stones Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":29,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402118-1.jpg"
+    },
+    {
+        "id": 78,
+        "title": "Signature Silver Beads & Blue Stones Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":29,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402117-1.jpg"
+    },
+    {
+        "id": 79,
+        "title": "Signature Silver Beads & Green Stones Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":29,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402116-1.jpg"
+    },
+    {
+        "id": 80,
+        "title": "Signature Silver Beads & Mustard Stones Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":29,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402115-1.jpg"
+    },
+    {
+        "id": 81,
+        "title": "Signature Silver Ball Bangle",
+        "metal":"sliver",
+        "size":[],
+        "weight":17,
+        "price":149,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402041-1.jpg"
+    },
+    {
+        "id": 82,
+        "title": "Indus Valley Garnet & Pearl Jhumka Earrings",
+        "metal":"sliver",
+        "size":[],
+        "weight":56,
+        "price":495,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402027-1.jpg"
+    },
+    {
+        "id": 83,
+        "title": "Indus Valley Multani Moon Mala Set",
+        "metal":"sliver",
+        "size":[],
+        "weight":173,
+        "price":1495,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402029-1.jpg"
+    },
+    {
+        "id": 84,
+        "title": "Indus Valley Multani Sun Choker Set",
+        "metal":"sliver",
+        "size":[],
+        "weight":99,
+        "price":750,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402030-1.jpg"
+    },
+    {
+        "id": 85,
+        "title": "Indus Valley Multani Disc Set",
+        "metal":"sliver",
+        "size":[],
+        "weight":144,
+        "price":1295,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402038-1.jpg"
+    },
+    {
+        "id": 86,
+        "title": "Indus Valley Multani Hexagon Set",
+        "metal":"sliver",
+        "size":[],
+        "weight":129,
+        "price":1295,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402036-1.jpg"
+    },
+    {
+        "id": 87,
+        "title": "Indus Valley Multani Celestial Set",
+        "metal":"sliver",
+        "size":[],
+        "weight":172,
+        "price":1495,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402033-1.jpg"
+    },
+    {
+        "id": 88,
+        "title": "Indus Valley Multani Oval Mala Set",
+        "metal":"sliver",
+        "size":[6,7,8],
+        "weight":128,
+        "price":1295,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402032-1.jpg"
+    },
+    {
+        "id": 89,
+        "title": "Indus Valley Multani with Stones Necklace",
+        "metal":"sliver",
+        "size":[],
+        "weight":82,
+        "price":895,
+        "img":"https://nidatabba.com/_content/Library/img/products/NT402037-1.jpg"
+    }
+]
