@@ -20,10 +20,6 @@ function Catalog() {
     const gotoProduct = (id) => {
       navigate(`/product/${id}`);
     };
-
-
-
-
   return (
     <>
         <div className='w-full h-[50vh] pt-[7rem] px-6 flex flex-col gap-5'>

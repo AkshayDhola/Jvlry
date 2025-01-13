@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
+const config = require('./config/mongoose-connection')
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const userModel = require("./models/usermodel")
