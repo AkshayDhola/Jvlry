@@ -1,37 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios'
-import Footer from './Footer';
+import axios from "axios";
+import Footer from "./Footer";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/cartSlice";
+
 function Product() {
-    const { id } = useParams();
+    const { _id } = useParams();
+    const [cat, setcat] = useState("");
     const [product, setProduct] = useState(null);
+
+    const dispatch = useDispatch();
+
+  const addToCartHandler = () => {
+    const { _id, price, title, img } = product;
+    dispatch(addToCart({ _id, price, title, img }));
+  };
+
     useEffect(() => {
         const fetchProductDetails = async () => {
-            const response = await fetch(`http://localhost:3000/api/jevlry/${id}`);
+            const response = await fetch(`http://localhost:3000/api/jevlry/${_id}`);
             const data = await response.json();
-            setProduct(data);
+            setProduct(data);        
         };
 
         fetchProductDetails();
-    }, [id]);
+    }, [_id]);
     if (!product) {
       return <div>Loading...</div>;
     }
 
+   
+    
 
-    const handleCart = async () => {
-      try {
-        const response = await axios.post('http://localhost:3000/addtocart', product.id);
-        if (response.status === 201) {
-          alert("done!")
-        } else {
-          alert(response.statusText);
-        }
-      } catch (err) {
-        alert(err);
-      }
-    };
-
+  
   return (
     <>
     <div className='w-full h-screen flex gap-5 px-5 py-[17vh]'>
@@ -61,7 +63,7 @@ function Product() {
           </div>
           <div className='flex justify-between pt-8'>
             <h2 className='n text-[1.4vw] font-semibold'>${product.price}</h2>
-            <button onClick={()=>handleCart()} className='px-11 py-2 text-[.8vw] uppercase bg-black text-white border border-zinc-400/50 rounded-full'>Add to cart</button>
+            <button onClick={addToCartHandler} className='px-11 py-2 text-[.8vw] uppercase bg-black text-white border border-zinc-400/50 rounded-full'>Add to cart</button>
           </div>
         </div>
     </div>

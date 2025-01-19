@@ -26,3 +26,7 @@ body{
 .n{
     font-family: number;
 }
+
+.noScroll::-webkit-scrollbar{
+    display: none;
+}

@@ -1,5 +1,4 @@
 import React from 'react'
-import Swwiper from './Swwiper'
 import Footer from './Footer'
 function About() {
   return (
