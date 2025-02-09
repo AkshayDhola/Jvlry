@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
 
@@ -20,6 +20,13 @@ const CreateUser = () => {
       postalCode: "",
     },
   });
+
+  useEffect(()=>{
+    const token=localStorage.getItem('token');
+    if(token){
+      navigate('/user');
+    }
+  },[])
 
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
@@ -50,7 +57,7 @@ const CreateUser = () => {
 
     try {
       const response = await axios.post("http://localhost:3000/api/users/register", formData);
-      const token = response.data
+      const token = response.data.token;   
       localStorage.setItem('token', token); 
       navigate("/user");
       setFormData({

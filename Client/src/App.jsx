@@ -10,7 +10,10 @@ import Product from './componets/Product';
 import User from './componets/User';
 import ProtectedRoute from "./componets/ProtectedRoute"
 import Error from './componets/Error';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 
+const stripePromise = loadStripe('pk_test_51QlNZkE9sXHqPRmjPTg1PNfhCFOIbl3LETrBugatLFkpJZYs46lCMV60P3EnBpRqe8QCvmXo5uS9oQBPBwkGTy7h00gbRePMy0'); 
 function App() {
   return (
     <>
@@ -24,7 +27,7 @@ function App() {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/about" element={<About />} />
         <Route path='*' element={<Error/>} />
-        <Route path="/user" element={<ProtectedRoute><User /></ProtectedRoute>} />
+        <Route path="/user" element={ <Elements stripe={stripePromise}><ProtectedRoute><User /></ProtectedRoute></Elements>} />
       </Routes>
     </Router> 
     </>

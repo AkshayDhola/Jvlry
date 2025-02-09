@@ -4,18 +4,21 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
+const easyinvoice = require('easyinvoice');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const config = require('./config/mongoose-connection')
 const path = require('path');
 const userModel = require("./models/usermodel");
 const productModel = require("./models/productmodel");
+const adminModel =require("./models/ownermodel");
 const secretKey = 'sitaram';
+const Stripe = require('stripe');
 
 app.use(cors()); 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+const stripe = Stripe('sk_test_51QlNZkE9sXHqPRmjEjMn54PoOmzT97avunj4YApToNY82IliUYm4Gx4Xu2RR2T1BLyKWbXSDlFgg8rJSM45kdpWM00pavasxfg'); 
 // app.post('/addtocart', async (req, res) => {
 //     const { id } = req.body;
 //     try {
@@ -25,6 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 //     } catch (error) {
 //         res.status(500).send({ message: 'Error registering user', error });
 //     }
+
 // });
 
 
@@ -50,6 +54,24 @@ app.get('/api/jevlry/:_id', async(req, res) => {
       res.status(500).json({ error: 'Server error' });
     }
 });
+
+app.post('/create-payment-intent', async (req, res) => {
+  const { amount } = req.body; 
+  try {
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: amount,
+      currency: 'usd', 
+      payment_method_types: ['card'],
+    });
+    res.status(200).json({ clientSecret: paymentIntent.client_secret});
+  } catch (error) {
+    console.error('Error creating payment intent:', error.message);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+
 
 
 app.post('/api/users/register', async (req, res) => {
@@ -82,6 +104,23 @@ app.post('/api/users/register', async (req, res) => {
     }
 });
 
+app.post('/api/auth/login', async (req, res) => {
+  try {
+    const { email, password}= req.body;
+    const existingAdmin = await adminModel.findOne({ email, password });
+    if (existingAdmin) {
+      return res.status(200);
+    }
+    else{
+      res.json({ error: 'not found' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+
 const authToken = (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
   if (!token) {
@@ -100,11 +139,10 @@ const authToken = (req, res, next) => {
 
 
 app.get("/api/user/data", authToken,async (req,res)=>{    
-    let user = await userModel.findById(req.token.id);
+    let user = await userModel.findById(req.token._id);
     if (!user) {
       return res.status(404).json({ error: "User not found" });
     }
-
     res.status(200).json({ user });
 
 })

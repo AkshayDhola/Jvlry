@@ -49,9 +49,9 @@ const Navbar = () => {
                   <div className='flex w-52 justify-between pt-11'>
 
                   <div className='flex w-20 justify-between items-center overflow-hidden h-6 border border-zinc-400/50 rounded-full'>
-                    <h1 className='w-8 text-center font-bold text-[1vw] text-zinc-400/50 hover:cursor-pointer' onClick={()=>dispatch(removeFromCart(item.id))}>-</h1>
+                    <h1 className='w-8 text-center font-bold text-[1vw] text-zinc-400/50 hover:cursor-pointer' onClick={()=>dispatch(removeFromCart(item._id))}>-</h1>
                     <p className='w-8 text-center text-[1vw]'>{item.quantity}</p>
-                    <h1 className='w-8 text-center font-bold text-[1vw] text-zinc-400/50 hover:cursor-pointer' onClick={()=>dispatch(addQuantity(item.id, totalPrice))}>+</h1>
+                    <h1 className='w-8 text-center font-bold text-[1vw] text-zinc-400/50 hover:cursor-pointer' onClick={()=>dispatch(addQuantity(item._id, totalPrice))}>+</h1>
                   </div>
                   <p className='n'>${item.price}</p>
                   </div>

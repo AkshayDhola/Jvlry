@@ -10,10 +10,9 @@ function Catalog() {
 
     const filterredItem = data.filter(
         (item) =>
-          item.title.toLowerCase().includes(search.toLowerCase()) ||
-          item.title.toLowerCase().includes(cat.toLowerCase()) 
-        //   (cat === "all products" ||
-        //     item.title.toLowerCase() === cat.toLowerCase())
+          item.title.toLowerCase().includes(search.toLowerCase()) &&
+          (cat === "all products" ||
+            item.category.toLowerCase() === cat.toLowerCase())
       );
 
 
@@ -32,9 +31,7 @@ function Catalog() {
     }, []);
 
     function gotoProduct(_id){
-      navigate(`/product/${_id}`);
-    console.log(_id);
-    
+      navigate(`/product/${_id}`);  
     };
   return data.length >= 1 ? (
     <>
