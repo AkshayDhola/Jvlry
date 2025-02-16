@@ -94,8 +94,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="name"
-                className={`n ${errors.name && touched.name && "border-[1px] border-red-500"
-                  } w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.name && touched.name ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="Enter Name"
                 type="text"
                 value={values.name}
@@ -108,10 +107,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="email"
-                className={`w-[25vw] ${errors.email &&
-                  touched.email &&
-                  "border-[1px] border-red-500"
-                  } px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.email && touched.email ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="Email*"
                 type="text"
                 value={values.email}
@@ -127,10 +123,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="password"
-                className={`w-[25vw] ${errors.password &&
-                  touched.password &&
-                  "border-[1px] border-red-500"
-                  } px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.password && touched.password ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="Password*"
                 type="password"
                 value={values.password}
@@ -143,10 +136,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="contact"
-                className={`n ${errors.contact &&
-                  touched.contact &&
-                  "border-[1px] border-red-500"
-                  } w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.contact && touched.contact ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="Enter contact"
                 type="text"
                 value={values.contact}
@@ -159,10 +149,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="picture"
-                className={`n ${errors.picture &&
-                  touched.picture &&
-                  "border-[1px] border-red-500"
-                  } w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.picture && touched.picture ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="Enter picture"
                 type="text"
                 value={values.picture}
@@ -178,10 +165,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="billingAddress.street"
-                className={`n ${errors.billingAddress?.street &&
-                  touched.billingAddress?.street &&
-                  "border-[1px] border-red-500"
-                  } w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.billingAddress?.street && touched.billingAddress?.street ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="Street Address*"
                 type="text"
                 value={values.billingAddress.street}
@@ -193,8 +177,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="billingAddress.city"
-                className={`n w-[25vw] ${errors.billingAddress?.city && touched.billingAddress?.city && "border-[1px] border-red-500"
-                  } px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.billingAddress?.city && touched.billingAddress?.city ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="City*"
                 type="text"
                 value={values.billingAddress.city}
@@ -208,8 +191,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="billingAddress.state"
-                className={`n ${errors.billingAddress?.state && touched.billingAddress?.state && "border-[1px] border-red-500"
-                  } w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.billingAddress?.state && touched.billingAddress?.state ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="State*"
                 type="text"
                 value={values.billingAddress.state}
@@ -221,8 +203,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="billingAddress.postalCode"
-                className={`n w-[25vw] ${errors.billingAddress?.postalCode && touched.billingAddress?.postalCode && "border-[1px] border-red-500"
-                  } px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.billingAddress?.postalCode && touched.billingAddress?.postalCode ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="Zip*"
                 type="text"
                 value={values.billingAddress.postalCode}
@@ -237,10 +218,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="cardNumber"
-                className={`n w-[25vw] ${errors.cardNumber &&
-                  touched.cardNumber &&
-                  "border-[1px] border-red-500"
-                  } px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[25vw] px-3 py-2 text-[1vw] border ${errors.cardNumber && touched.cardNumber ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="Card Number*"
                 type="text"
                 value={values.cardNumber}
@@ -252,10 +230,7 @@ const CreateUser = () => {
             <div>
               <input
                 name="monthYear"
-                className={`n w-[12.5vw] ${errors.monthYear &&
-                  touched.monthYear &&
-                  "border-[1px] border-red-500"
-                  } px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[12.5vw] px-3 py-2 text-[1vw] border ${errors.monthYear && touched.monthYear ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="MM/YYYY"
                 type="text"
                 value={values.monthYear}
@@ -268,8 +243,7 @@ const CreateUser = () => {
               <input
                 id="cvv"
                 name="cvv"
-                className={`n w-[12.5vw] ${errors.cvv && touched.cvv && "border-[1px] border-red-500"
-                  } px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50`}
+                className={`w-[12.5vw] px-3 py-2 text-[1vw] border ${errors.cvv && touched.cvv ? "border-red-500" : "border-zinc-700/50"} rounded-md outline-zinc-950/50`}
                 placeholder="CVV"
                 type="text"
                 value={values.cvv}
@@ -281,7 +255,7 @@ const CreateUser = () => {
           </div>
           <button
             onClick={handleSubmit}
-            className="n w-[25vw] px-3 py-2 bg-black text-white text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
+            className="w-[25vw] px-3 py-2 bg-black text-white text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
             type="submit"
           >Register</button>
         </div>

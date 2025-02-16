@@ -9,6 +9,7 @@ function Product() {
     const { _id } = useParams();
     const [cat, setcat] = useState("");
     const [product, setProduct] = useState(null);
+    const [size, setsize] = useState(null)
 
     const dispatch = useDispatch();
 
@@ -51,7 +52,7 @@ function Product() {
             <h2>Size</h2>
             <div className='flex gap-2'>
             {(product.size.length === 0)?"no":product.size.map((e,i)=>{
-              return <p key={i} className='px-5 py-1 text-[.8vw] uppercase border border-zinc-400/50 rounded-full'>{e}</p>
+              return <p onClick={()=>setsize(e)} key={i} className={` ${size === e ? 'bg-black text-white' : ''} px-5 cursor-pointer py-1 text-[.8vw] uppercase border border-zinc-400/50 rounded-full`}>{e}</p>
             })}
             </div>
             
