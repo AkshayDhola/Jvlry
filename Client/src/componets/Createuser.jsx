@@ -18,7 +18,7 @@ const CreateUser = () => {
       city: "",
       state: "",
       postalCode: "",
-    },
+    }
   });
 
   useEffect(()=>{
