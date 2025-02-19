@@ -30,3 +30,8 @@ body{
 .noScroll::-webkit-scrollbar{
     display: none;
 }
+
+.active{
+  
+    border-bottom: 2px solid blue;
+}

@@ -25,6 +25,7 @@ function Catalog() {
                 const result = await response.json();
                 setData(result);
             } catch (error) {
+              console.log(error)
             } 
         };
         fetchData();
