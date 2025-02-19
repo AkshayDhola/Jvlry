@@ -60,8 +60,6 @@ function User() {
           card: elements.getElement(CardElement),
         },
       });
-      // const url = window.URL.createObjectURL(new Blob(data));
-      // const link = document.createElement('a');
       // link.href = url;
       // link.setAttribute('download', `invoice-${invoiceId}.pdf`);
       // document.body.appendChild(link);
@@ -141,32 +139,24 @@ function User() {
 
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-scree w-full flex pt-16">
+      <div className="w-1/4">
         {/* User Profile Section */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <div className="flex items-center mb-6">
-            <FaUser className="w-8 h-8 text-blue-600 mr-3" />
-            <h1 className="text-2xl font-bold text-gray-800">User Profile</h1>
+        <div className="px-6">
+          <div className="h-20 flex gap-3 items-center border-b-[1px]">
+            <img className='w-14 h-14 rounded-full' src={data.picture} alt="" />
+            <div className='h-9'>
+              <h1 className="text-lg text-gray-800 leading-none">{data.name}</h1>
+              <p className="text-md text-gray-600">{data.email}</p>
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-sm text-gray-500">Name</p>
-              <p className="font-medium text-gray-900">{data.name}</p>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-sm text-gray-500">Email</p>
-              <p className="font-medium text-gray-900">{data.email}</p>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
+          <div className="flex flex-col gap-3 mt-6">
+            <div className="p-4">
               <p className="text-sm text-gray-500">Billing Address</p>
               <p className="font-medium text-gray-900">
-                {data?.billingAddress?.street}, {data?.billingAddress?.city}, {data?.billingAddress?.state} {data?.billingAddress?.postalCode}
+                {data?.billingAddress?.street}, {data?.billingAddress?.city} - {data?.billingAddress?.postalCode},<br /> {data?.billingAddress?.state} 
               </p>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-sm text-gray-500">Payment Card</p>
+              <p className="text-sm text-gray-500 mt-6">Payment Card</p>
               <p className="font-medium text-gray-900">**** **** **** {data.cardNumber?.slice(-4)}</p>
             </div>
           </div>
