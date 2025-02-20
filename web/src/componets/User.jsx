@@ -139,18 +139,16 @@ function User() {
 
 
   return (
-    <div className="min-h-scree w-full flex pt-16">
-      <div className="w-1/4">
-        {/* User Profile Section */}
-        <div className="px-6">
-          <div className="h-20 flex gap-3 items-center border-b-[1px]">
+    <div className="min-h-screen overflow-hidden w-full flex pt-16">
+      <div className="w-1/5 border-r-[1px] border-t-[1px]">
+          <div className="h-20 flex gap-3 items-center border-b-[1px] pl-6">
             <img className='w-14 h-14 rounded-full' src={data.picture} alt="" />
             <div className='h-9'>
               <h1 className="text-lg text-gray-800 leading-none">{data.name}</h1>
               <p className="text-md text-gray-600">{data.email}</p>
             </div>
           </div>
-          <div className="flex flex-col gap-3 mt-6">
+          <div className="flex flex-col gap-3 mt-6 pl-4">
             <div className="p-4">
               <p className="text-sm text-gray-500">Billing Address</p>
               <p className="font-medium text-gray-900">
@@ -160,23 +158,15 @@ function User() {
               <p className="font-medium text-gray-900">**** **** **** {data.cardNumber?.slice(-4)}</p>
             </div>
           </div>
-        </div>
-
-        {/* Cart Items Section */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <div className="flex items-center mb-6">
-            <FaShoppingCart className="w-8 h-8 text-green-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-800">Cart Items</h2>
-          </div>
-
-          <div className="space-y-4">
-            {cartData.map((item, index) => (
-              <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                <img className="w-20 h-20 object-cover rounded-lg" src={item.img} alt={item.title} />
-                <div className="ml-4 flex-1">
+      </div>
+      <div className='w-3/4 flex flex-wrap gap-3 h-1/2 ml-12'>
+        {cartData.map((item, index) => (
+              <div key={index} className="w-[25rem] h-44 p-4 flex items-center border-[1px] gap-3">
+                <img className="w-36 h-36 object-cover" src={item.img} alt={item.title} />
+                <div className="flex flex-col justify-between h-full">
                   <h3 className="font-medium text-gray-900">{item.title}</h3>
-                  <div className="flex items-center justify-between mt-2">
-                    <div className="flex items-center space-x-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
                       <button
                         onClick={() => dispatch(removeFromCart(item._id))}
                         className="w-8 h-8 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-200"
@@ -193,23 +183,14 @@ function User() {
                         +
                       </button>
                     </div>
-                    <p className="text-lg font-semibold text-blue-600">${item.price}</p>
+                    <p className="text-xl">${item.price}</p>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Payment Section */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <div className="flex items-center mb-6">
-            <FaCreditCard className="w-8 h-8 text-purple-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-800">Payment Information</h2>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="border rounded-lg p-4">
+          <div className="w-full py-7">
+          <form onSubmit={handleSubmit} className="flex gap-4">
+            <div className="w-4/5 border p-4">
               <CardElement
                 className="p-2"
                 options={{
@@ -232,38 +213,33 @@ function User() {
             <button
               type="submit"
               disabled={!stripe || isLoading}
-              className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+              className="w-1/5 py-3 px-6 rounded-lg border-[1px]"
             >
               {isLoading ? 'Processing...' : 'Pay Now'}
             </button>
 
-            {message && (
-              <div className={`p-4 rounded-lg ${message.includes('successful') ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                }`}>
-                {message}
-              </div>
-            )}
+            
           </form>
-        </div>
+          <div className='w-fit mt-5'>
+          {message && (
+            message.includes('successful') ? (
+              <button onClick={generateInvoice} className="px-5 flex items-center justify-center w-full border-[1px] py-3 rounded-lg">
+                Download Invoice
+              </button>
+              ) : 
+              (
+              <div className="flex items-center justify-center w-full border-[1px] py-3 px-6 rounded-lg">
+                Unsuccessful, try again
+              </div>
+              )
+            )}
 
-        {/* Invoice Section */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <div className="flex items-center mb-6">
-            <FaDownload className="w-8 h-8 text-orange-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-800">Order History</h2>
-          </div>
-
-          <button
-            onClick={generateInvoice}
-            className="flex items-center justify-center w-full md:w-auto bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            <FaDownload className="mr-2" />
-            Download Invoice
-          </button>
         </div>
-      </div>
+          
+        </div>
+      
     </div>
-
+    </div>
   )
 }
 
