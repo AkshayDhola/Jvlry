@@ -59,7 +59,7 @@ function User() {
       const { data } = await axios.post(
         "http://localhost:3000/create-payment-intent",
         {
-          amount: totalPrice,
+          amount: totalPrice ,
           customerId: ID,
         }
       );
@@ -148,7 +148,7 @@ function User() {
     <div className="w-full h-screen overflow-hidden flex">
       <div className="w-1/5 h-screen pt-16 pb-5 px-3 flex flex-col justify-between">
         <div>
-          <div className="w-full bg-sky-300 h-44 relative overflow-hidden rounded-sm">
+          <div className="w-full h-44 relative overflow-hidden rounded-sm">
             <img
               className="w-full h-full object-cover"
               src={data.picture}
