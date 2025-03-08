@@ -3,35 +3,34 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: maison;
-    src: url(./Beary.ttf);
+  font-family: maison;
+  src: url(./Beary.ttf);
 }
 
 @font-face {
-    font-family: rom;
-    src: url(./Qinferly.ttf);
+  font-family: rom;
+  src: url(./Qinferly.ttf);
 }
 
 @font-face {
-    font-family: number;
-    src: url(./MaisonNeue-Light.ttf);
+  font-family: number;
+  src: url(./MaisonNeue-Light.ttf);
 }
-body{
-    font-family: maison;
+body {
+  font-family: maison;
 }
-.jm{
-    font-family: rom;
-}
-
-.n{
-    font-family: number;
+.jm {
+  font-family: rom;
 }
 
-.noScroll::-webkit-scrollbar{
-    display: none;
+.n {
+  font-family: number;
 }
 
-.active{
-  
-    border-bottom: 2px solid blue;
+.noScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  border-bottom: 2px solid blue;
 }

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: maison;
+    src: url(./Beary.ttf);
+}
+
+@font-face {
+    font-family: rom;
+    src: url(./Qinferly.ttf);
+}
+
+@font-face {
+    font-family: number;
+    src: url(./MaisonNeue-Light.ttf);
+}
+
+body {
+    font-family: maison;
+}
+
+.jm {
+    font-family: rom;
+}

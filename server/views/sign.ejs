@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>Admin</title>
+</head>
+
+<body>
+    <div class="w-full h-screen overflow-hidden">
+        <div class="w-full h-full flex justify-between">
+            <div class="w-1/2 flex">
+                <div class="w-1/3 py-5 flex justify-center items-start max-sm:pt-3 max-sm:px-3">
+                    <h2 class="jm text-2xl max-sm:text-2xl max-sm:pl-7">Jvlry</h2>
+                </div>
+                <img class="w-1/3 h-full object-cover" src="./flower.jpg" alt="" />
+                <img class="w-1/3 h-full object-cover" src="./ring.jpg" alt="" />
+            </div>
+            <div class="w-1/2 flex justify-center items-center flex-col max-sm:w-full">
+                <h2 class="jm text-3xl py-11 max-sm:text-2xl">Sign in</h2>
+                <form action="/loginadmin" method="post" class="mt-4 flex flex-col justify-between h-52">
+                    <input class="w-72 px-5 py-2 outline-none border-black border-b" placeholder="Email" name="email"
+                        type="text" />
+                    <input class="w-72 px-5 py-2 outline-none border-black border-b" placeholder="password"
+                        name="password" type="password" />
+                    <input class="w-72 bg-[#f1f7d9] px-5 py-2 outline-none" type="submit" value="login in" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

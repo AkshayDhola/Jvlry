@@ -12,6 +12,7 @@ const userSchema = mongoose.Schema({
     type: Array,
     default: [],
   },
+  _stripeid: { type: String, default: null },
   picture: String,
   cardNumber: { type: String, required: true },
   expirationDate: { type: String, required: true }, // Format: MM/YYYY
@@ -22,10 +23,10 @@ const userSchema = mongoose.Schema({
     state: { type: String, required: true },
     postalCode: { type: String, required: true },
   },
-  isDelete:{
-    type:Boolean,
-    default:false
-  }
+  isDelete: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 module.exports = mongoose.model("user", userSchema);

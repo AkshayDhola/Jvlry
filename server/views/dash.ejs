@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+  <title>Admin Dashboard</title>
+</head>
+
+<body>
+  <div class="w-full h-screen overflow-hidden">
+    <div class="w-full h-12 flex items-center justify-between px-5 py-3 bg-red-50">
+      <a href="/dash" class="jm text-xl">Jvlry</a>
+      <div class="flex gap-11 items-center h-full">
+        <a class="jm" href="/product">Product</a>
+        <% const totalEarnings = paymentIntents.data.reduce((sum, intent) => sum + intent.amount, 0); %>
+        <h2 class="jm text-lg text-zinc-800">💰 $<%= (totalEarnings / 100).toFixed(2) %></h2>
+      </div>
+    </div>
+
+    <div class="w-full h-screen p-3 flex gap-3 justify-around ">
+      <!-- User List with Total Earnings -->
+      <div class="w-72 h-1/2 border-[1.5px] rounded p-3 relative overflow-y-clip">
+        <h1 class="jm text-sm pb-2 absolute top-2">🪴 Users</h1>
+        <div class="flex flex-col gap-2 pt-8">
+          <% if (userData) { %>
+            <% userData.forEach(element=> { %>
+              <div class="w-full h-16 border p-3">
+                <div>
+                  <% let totalAmount = 0; %>
+                  <% paymentIntents.data.forEach(intent=> { %> 
+                    <% if (intent.customer == element._stripeid) { %>
+                      <% totalAmount += intent.amount; %>
+                    <% } %>
+                  <% }); %>
+                  <div class="w-full flex justify-between">
+                    <p class="text-sm text-zinc-800 lowercase"><%= element.name %></p>
+                    <p class="n text-[#A4B465]">$<%= (totalAmount / 100).toFixed(2) %></p>
+                  </div>
+                  <p class="text-sm text-zinc-600"><%= element.email %></p>
+                </div>
+              </div>
+            <% }); %>
+          <% } %>
+        </div>
+      </div>
+
+      <!-- Monthly Payment Overview -->
+      <div class="w-80 h-1/2 border-[1.5px] rounded p-3 relative overflow-y-clip">
+        <% const monthlyData = {}; %>
+        <% paymentIntents.data.forEach(intent => { %>
+          <% const date = new Date(intent.created * 1000); %>
+          <% const monthYear = `${date.toLocaleString('default', { month: 'short' })} ${date.getFullYear()}`; %>
+          <% if (!monthlyData[monthYear]) { %>
+            <% monthlyData[monthYear] = 0; %>
+          <% } %>
+          <% monthlyData[monthYear] += intent.amount; %>
+        <% }); %>
+
+        <h2 class="jm text-sm pb-2 absolute top-2"> 📊 Monthly Payments </h2>
+        <ul class="flex flex-col gap-2 pt-8">
+          <% Object.keys(monthlyData).forEach(month => { %>
+            <li class="flex justify-between border-b pb-2">
+              <span class="text-sm text-zinc-600"><%= month %></span>
+              <span class="jm text-sm">$<%= (monthlyData[month] / 100).toFixed(2) %></span>
+            </li>
+          <% }); %>
+        </ul>
+      </div>
+
+      <!-- Top 3 Highest Paying Users -->
+      <div class="w-80 h-1/2 border-[1.5px] rounded p-3 relative">
+        <h2 class="jm text-sm pb-2 absolute top-2">🏆 Top 3 Customers</h2>
+        <div class="flex flex-col gap-2 pt-8">
+          <% if (userData) { %>
+            <% const userEarnings = []; %>
+            <% userData.forEach(element => { %>
+              <% let totalAmount = 0; %>
+              <% paymentIntents.data.forEach(intent => { %>
+                <% if (intent.customer === element._stripeid) { %>
+                  <% totalAmount += intent.amount; %>
+                <% } %>
+              <% }); %>
+              <% userEarnings.push({ name: element.name, email: element.email, totalAmount }); %>
+            <% }); %>
+  
+            <% userEarnings.sort((a, b) => b.totalAmount - a.totalAmount); %>
+            <% userEarnings.forEach((user, index) => { %>
+              <div class="w-full h-12 border-b p-3 flex justify-between items-center">
+                <p class="jm text-sm text-zinc-800 lowercase"><%= user.name %></p>
+                <p class="jm text-[#A4B465]">$<%= (user.totalAmount / 100).toFixed(2) %></p>
+              </div>
+            <% }); %>
+          <% } %>
+        </div>
+      </div>
+      <div class="w-64 h-1/2 border-[1.5px] rounded p-3 flex items-center flex-col">
+        <h2 class="jm text-sm py-2">💳 Recent Transactions</h2>
+        <ul class="w-full flex flex-col gap-2 pt-8">
+          <% paymentIntents.data.slice(0,5).forEach(intent => { %>
+            <li class="flex justify-between border-b pb-2">
+              <span class="text-sm text-zinc-600"><%= new Date(intent.created * 1000).toLocaleDateString() %></span>
+              <span class="jm text-sm">$<%= (intent.amount)%></span>
+            </li>
+          <% }); %>
+        </ul>
+      </div> 
+    </div>
+  </div>
+</body>
+
+</html>

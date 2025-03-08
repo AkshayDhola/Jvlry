@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>Admin</title>
+</head>
+<body>
+  <div class="w-full h-screen">
+    <div class="w-full h-12 flex items-center justify-between px-5 py-3 bg-red-50">
+      <a href="/dash" class="jm text-xl">Jvlry</a>
+      <div class="flex gap-11 items-center h-full">
+        <a class="jm" href="/product">Product</a>
+        <% const totalEarnings = paymentIntents.data.reduce((sum, intent) => sum + intent.amount, 0); %>
+        <h2 class="jm text-lg text-zinc-800">💰 $<%= (totalEarnings / 100).toFixed(2) %></h2>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-center gap-11">
+    <% product.slice(0,15).map(element =>{ %>
+        <div
+        key={i}
+        class="flex flex-col gap-1"
+      >
+        <img
+          class="w-[231px] h-[234px] cursor-pointer object-cover rounded hover:scale-95 duration-200"
+          src=<%= element.img %>
+          key=<%= element._id %>
+        />
+        <p class="n text-[.9vw]"><%= element.title %></p>
+        <p class="n text-[1vw] text-zinc-700/50"><%= element.price %></p>
+      </div>
+    <% }) %>
+    </div>
+</div>
+</body>
+</html>
