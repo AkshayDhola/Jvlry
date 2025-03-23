@@ -56,6 +56,56 @@ app.post("/loginadmin", async (req, res) => {
   res.redirect("/dash");
 });
 
+
+app.post("/deleteproduct", async (req, res) => {
+  const { _id } = req.body; 
+  await productModel.findByIdAndDelete(_id);
+  res.redirect("/product");
+});
+
+app.post("/postproduct", async (req, res) => {
+  const { _id,title, category, metal, size, weight, price, img } = req.body;
+  if (_id) {
+    const updateProduct = await productModel.findByIdAndUpdate(_id,{
+      title : title,
+      category: category,
+      metal : metal,
+      size : size,
+      weight: weight,
+      price: price,
+      img : img
+    },{new : true});
+    res.redirect("/product");
+  }
+  else{
+    let product = await productModel.create({
+      title : title,
+      category: category,
+      metal : metal,
+      size : size,
+      weight: weight,
+      price: price,
+      img : img
+    })
+    if(!product) return res.send("product not inserted");
+    res.redirect("/product");
+  }
+});
+
+app.get("/jmlry/:_id", async (req, res) => {
+  const productId = req.params._id;
+  try {
+    const product = await productModel.findById(productId);
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+    res.render("item",{ product });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
 app.get("/api/jevlry", async (req, res) => {
   try {
     let data = await productModel.find();

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+  <title>Admin</title>
+</head>
+
+<body>
+    <div class="w-full h-screen">
+        <div class="w-full h-12 flex items-center justify-between px-5 py-3 bg-red-50">
+          <a href="/dash" class="jm text-xl">Jvlry</a>
+          <div class="flex gap-11 items-center h-full">
+            <a class="jm" href="/product">Product</a>
+          </div>
+        </div>
+  <div class="w-full h-[92vh] bg-white flex-col items-start justify-start py-5 px-11 absolute top-12 left-0 z-50">
+    <form action="/postproduct" method="post" class="flex flex-wrap gap-5">
+        <input type="text" name="_id" value="<%= product._id %>" hidden>
+      <input type="text" name="title"
+        class="w-[25vw] px-3 py-[5.5px] text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
+        placeholder="Product Title" value="<%= product.title %>" />
+        <select name="category"
+        class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50">
+  <option value="">Select Category</option>
+  <option value="ring" <%= product.category === 'ring' ? 'selected' : '' %>>Ring</option>
+  <option value="set" <%= product.category === 'set' ? 'selected' : '' %>>Set</option>
+  <option value="anklet" <%= product.category === 'anklet' ? 'selected' : '' %>>Anklet</option>
+  <option value="bracelet" <%= product.category === 'bracelet' ? 'selected' : '' %>>Bracelet</option>
+  <option value="earring" <%= product.category === 'earring' ? 'selected' : '' %>>Earring</option>
+  <option value="bangle" <%= product.category === 'bangle' ? 'selected' : '' %>>Bangle</option>
+  <option value="necklace" <%= product.category === 'necklace' ? 'selected' : '' %>>Necklace</option>
+</select>
+
+
+      <select name="metal" class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50">
+        <option value="">Select Metal</option>
+        <option value="sliver" <%= product.metal === 'sliver' ? 'selected' : '' %>>Silver</option>
+        <option value="gold" <%= product.metal === 'gold' ? 'selected' : '' %>>Gold</option>
+        <option value="titanium" <%= product.metal === 'titanium' ? 'selected' : '' %>>Titanium</option>
+      </select>
+      <div class="flex flex-wrap gap-2">
+        <div class="flex items-center">
+          <input type="checkbox" id="size-5" <%= product.size.includes('5') ? 'checked' : '' %> name="size[]" value="5" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+          <label for="size-5" class="ml-2 text-md font-semibold text-gray-700">5</label>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" id="size-6" <%= product.size.includes('6') ? 'checked' : '' %> name="size[]" value="6" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+          <label for="size-6" class="ml-2 text-md font-semibold text-gray-700">6</label>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" id="size-7" <%= product.size.includes('7') ? 'checked' : '' %> name="size[]" value="7" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+          <label for="size-7" class="ml-2 text-md font-semibold text-gray-700">7</label>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" id="size-8" <%= product.size.includes('8') ? 'checked' : '' %> name="size[]" value="8" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+          <label for="size-8" class="ml-2 text-md font-semibold text-gray-700">8</label>
+        </div>
+        <div class="flex items-center">
+          <input type="checkbox" id="size-9" <%= product.size.includes('9') ? 'checked' : '' %> name="size[]" value="9" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+          <label for="size-9" class="ml-2 text-md font-semibold text-gray-700">9</label>
+        </div>
+      </div>
+      
+      <input type="number" name="weight"
+        class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
+        placeholder="Weight in grams" value="<%= product.weight %>" />
+      <input type="number" name="price"
+        class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
+        placeholder="Price in USD" value="<%= product.price %>" />
+      <input type="text" name="img"
+        class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
+        placeholder="Image URL" value="<%= product.img %>" />
+      <button type="submit"
+        class="w-[25vw] px-3 py-2 bg-black text-white text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50">
+        update Product
+      </button>
+    </form>
+    <form class="w-full h-full mt-11" action="/deleteproduct" method="post">
+      <input type="text" name="_id" value="<%= product._id %>" hidden>
+      <button type="submit"
+      class="w-[25vw] px-3 py-2 bg-black text-white text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50">
+      delete Product
+    </button>
+  </form>
+</div>
+    </div>
+</body>
+
+</html>

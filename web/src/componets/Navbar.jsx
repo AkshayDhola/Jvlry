@@ -30,6 +30,7 @@ const Navbar = () => {
         <NavLink to="/collection">Collection</NavLink>
         <NavLink to="/catalog">Catalog</NavLink>
         <NavLink to="/about">About</NavLink>
+        <NavLink to="/up">Up-Coming</NavLink>
       </div>
       <div className='text-[1.03vw] italic'>
         <button onClick={() => setIsOpen(true)}>Cart ({cartData.length})</button>

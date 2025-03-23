@@ -1,38 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../style.css">
-    <title>Admin</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css" />
+  <title>Admin</title>
 </head>
+
 <body>
+  <div id="modal"
+    class="hidden w-full h-[92vh] bg-white flex-col items-start justify-start py-5 px-11 absolute top-12 left-0 z-50">
+    <h2 class="jm text-lg font-bold mb-4">Add New Product</h2>
+    <form action="/postproduct" method="post" class="flex flex-wrap gap-5">
+    <input type="text" name="title"
+      class="w-[25vw] px-3 py-[5.5px] text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
+      placeholder="Product Title" />
+      <select name="category"
+      class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50">
+<option value="">Select Category</option>
+<option value="ring" >Ring</option>
+<option value="set" >Set</option>
+<option value="anklet" >Anklet</option>
+<option value="bracelet" >Bracelet</option>
+<option value="earring">Earring</option>
+<option value="bangle" >Bangle</option>
+<option value="necklace" >Necklace</option>
+</select>
+
+
+    <select name="metal" class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50">
+      <option value="">Select Metal</option>
+      <option value="sliver" >Silver</option>
+      <option value="gold" >Gold</option>
+      <option value="titanium">Titanium</option>
+    </select>
+    <div class="flex flex-wrap gap-2">
+      <div class="flex items-center">
+        <input type="checkbox" id="size-5" name="size[]" value="5" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+        <label for="size-5" class="ml-2 text-md font-semibold text-gray-700">5</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" id="size-6" name="size[]" value="6" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+        <label for="size-6" class="ml-2 text-md font-semibold text-gray-700">6</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" id="size-7" name="size[]" value="7" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+        <label for="size-7" class="ml-2 text-md font-semibold text-gray-700">7</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" id="size-8" name="size[]" value="8" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+        <label for="size-8" class="ml-2 text-md font-semibold text-gray-700">8</label>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" id="size-9" name="size[]" value="9" class="h-4 w-4 border-gray-300 focus:ring-indigo-500 rounded">
+        <label for="size-9" class="ml-2 text-md font-semibold text-gray-700">9</label>
+      </div>
+    </div>
+    
+    <input type="number" name="weight"
+      class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
+      placeholder="Weight in grams"  />
+    <input type="number" name="price"
+      class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
+      placeholder="Price in USD"  />
+    <input type="text" name="img"
+      class="w-[25vw] px-3 py-2 text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50"
+      placeholder="Image URL"  />
+    <button type="submit"
+      class="w-[25vw] px-3 py-2 bg-black text-white text-[1vw] border border-zinc-700/50 rounded-md outline-zinc-950/50">
+      add Product
+    </button>
+  </form>
+    <button id="close-modal" class="absolute top-6 right-11 text-red-500 text-xl font-semibold">
+      X
+    </button>
+  </div>
   <div class="w-full h-screen">
     <div class="w-full h-12 flex items-center justify-between px-5 py-3 bg-red-50">
       <a href="/dash" class="jm text-xl">Jvlry</a>
       <div class="flex gap-11 items-center h-full">
         <a class="jm" href="/product">Product</a>
-        <% const totalEarnings = paymentIntents.data.reduce((sum, intent) => sum + intent.amount, 0); %>
-        <h2 class="jm text-lg text-zinc-800">💰 $<%= (totalEarnings / 100).toFixed(2) %></h2>
+        <% const totalEarnings=paymentIntents.data.reduce((sum, intent)=>
+          sum + intent.amount, 0); %>
+          <h2 class="jm text-lg text-zinc-800">
+            💰 $<%= (totalEarnings / 100).toFixed(2) %>
+          </h2>
+          <button id="open-modal" class="jm text-lg text-zinc-800">
+            Adds Product
+          </button>
       </div>
     </div>
-    <div class="flex flex-wrap justify-center gap-11">
-    <% product.slice(0,15).map(element =>{ %>
-        <div
-        key={i}
-        class="flex flex-col gap-1"
-      >
-        <img
-          class="w-[231px] h-[234px] cursor-pointer object-cover rounded hover:scale-95 duration-200"
-          src=<%= element.img %>
-          key=<%= element._id %>
-        />
-        <p class="n text-[.9vw]"><%= element.title %></p>
-        <p class="n text-[1vw] text-zinc-700/50"><%= element.price %></p>
-      </div>
-    <% }) %>
+    <div class="w-full flex flex-wrap justify-center gap-11 pt-7">
+      <% product.map((element, i) => { %>
+        <div key={i} class="flex flex-col gap-1">
+          <a href="/jmlry/<%= element._id %>">
+            <img class="w-[231px] h-[234px] object-cover rounded hover:scale-95 duration-200"
+              src="<%= element.img %>" />
+          </a>
+          <p class="n text-[.9vw]">
+            <%= element.title %>
+          </p>
+          <p class="n text-[1vw] text-zinc-700/50">
+            <%= element.price %>
+          </p>
+        </div>
+      <% }) %>
     </div>
-</div>
+    
+  <script>
+    document
+      .getElementById("open-modal")
+      .addEventListener("click", function () {
+        document.getElementById("modal").classList.remove("hidden").add("flex");
+      });
+
+    document
+      .getElementById("close-modal")
+      .addEventListener("click", function () {
+        document.getElementById("modal").classList.add("hidden").remove("flex");
+      });
+  </script>
 </body>
+
 </html>

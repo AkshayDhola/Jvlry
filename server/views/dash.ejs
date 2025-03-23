@@ -22,9 +22,9 @@
 
     <div class="w-full h-screen p-3 flex gap-3 justify-around ">
       <!-- User List with Total Earnings -->
-      <div class="w-72 h-1/2 border-[1.5px] rounded p-3 relative overflow-y-clip">
+      <div class="w-72 h-2/3 border-[1.5px] rounded p-3 relative overflow-y-clip">
         <h1 class="jm text-sm pb-2 absolute top-2">🪴 Users</h1>
-        <div class="flex flex-col gap-2 pt-8">
+        <div class="flex flex-col gap-2 mt-8">
           <% if (userData) { %>
             <% userData.forEach(element=> { %>
               <div class="w-full h-16 border p-3">
@@ -37,7 +37,7 @@
                   <% }); %>
                   <div class="w-full flex justify-between">
                     <p class="text-sm text-zinc-800 lowercase"><%= element.name %></p>
-                    <p class="n text-[#A4B465]">$<%= (totalAmount / 100).toFixed(2) %></p>
+                    <p class="n text-[#A4B465]">$<%= (totalAmount).toFixed(2) %></p>
                   </div>
                   <p class="text-sm text-zinc-600"><%= element.email %></p>
                 </div>
@@ -72,7 +72,7 @@
 
       <!-- Top 3 Highest Paying Users -->
       <div class="w-80 h-1/2 border-[1.5px] rounded p-3 relative">
-        <h2 class="jm text-sm pb-2 absolute top-2">🏆 Top 3 Customers</h2>
+        <h2 class="jm text-sm pb-2 absolute top-2">🏆 Top Paying Customers</h2>
         <div class="flex flex-col gap-2 pt-8">
           <% if (userData) { %>
             <% const userEarnings = []; %>
@@ -90,7 +90,7 @@
             <% userEarnings.forEach((user, index) => { %>
               <div class="w-full h-12 border-b p-3 flex justify-between items-center">
                 <p class="jm text-sm text-zinc-800 lowercase"><%= user.name %></p>
-                <p class="jm text-[#A4B465]">$<%= (user.totalAmount / 100).toFixed(2) %></p>
+                <p class="jm text-[#A4B465]">$<%= (user.totalAmount).toFixed(2) %></p>
               </div>
             <% }); %>
           <% } %>
