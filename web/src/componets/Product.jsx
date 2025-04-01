@@ -69,7 +69,7 @@ function Product() {
         </div>
     </div>
 
-    <div className='w-full pt-44 flex px-7 py-7'>
+    <div className='w-full pt-52 flex px-7 py-7'>
     <div className='w-1/3'>
           <img className='w-[40vw] h-screen object-cover' src="https://nidatabba.com/_content/Library/img/item/item-discover-mystery-of-mexico-1.jpg" alt="" />
       </div>

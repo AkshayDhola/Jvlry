@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from 'react-router-dom'; 
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import easyinvoice from "easyinvoice";
 import {
@@ -23,6 +24,7 @@ function User() {
   const elements = useElements();
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     const token = localStorage.getItem("token");
 
@@ -85,6 +87,13 @@ function User() {
     }
 
     setIsLoading(false);
+  };
+  const handleClear = () =>{
+    const token = localStorage.getItem('token');
+    if(token){
+      localStorage.setItem("token","");
+      navigate('/');
+    }
   };
 
   const generateInvoice = async () => {
@@ -181,7 +190,7 @@ function User() {
           </div>
         </div>
         <div className="w-full px-3 pt-5">
-          <p className="text-md text-zinc-700">Sign out</p>
+          <p className="text-md text-zinc-700 cursor-pointer" onClick={handleClear}>Sign out</p>
         </div>
       </div>
       <div className="w-4/5 h-screen pt-16 pb-5 px-3 overflow-y-scroll">

@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className='text-[1.03vw] italic'>
         <button onClick={() => setIsOpen(true)}>Cart ({cartData.length})</button>
       </div>
-      <div className={`absolute w-[30vw] px-5 py-7 h-screen m-3 top-0 right-0 bg-white flex flex-col justify-between ${isOpen?'translate-x-0':'translate-x-[65vh]'} transition-transform ease-in-out duration-500`}>
+      <div className={`absolute w-[30vw] px-5 py-7 h-screen m-3 top-0 right-0 bg-white flex flex-col justify-between ${isOpen?'translate-x-0':'translate-x-[72vh]'} transition-transform ease-in-out duration-500`}>
         <div className='flex justify-between items-center'>
           <p>cart</p>
           <button onClick={() => setIsOpen(false)}>X</button>
