@@ -18,7 +18,7 @@ function Swwiper() {
         }}
         draggable={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-full"
+        className="w-full cursor-grab"
     >
         <SwiperSlide className='w-full h-[60vh]'>
             <img className='w-full h-full object-cover' src="https://nidatabba.com/_content/Library/img/home/home-mexico.jpg" alt="" />

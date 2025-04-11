@@ -12,6 +12,7 @@ import Error from './componets/Error';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import Upcomes from './componets/Upcomes';
+import Terms from './componets/Terms';
 const stripePromise = loadStripe('pk_test_51QlNZkE9sXHqPRmjPTg1PNfhCFOIbl3LETrBugatLFkpJZYs46lCMV60P3EnBpRqe8QCvmXo5uS9oQBPBwkGTy7h00gbRePMy0'); 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/up" element={<Upcomes />} />
         <Route path='*' element={<Error/>} />
+        <Route path='/terms' element={<Terms/>} />
         <Route path="/user" element={ <Elements stripe={stripePromise}><ProtectedRoute><User /></ProtectedRoute></Elements>} />
       </Routes>
     </Router> 

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom';
 function Footer() {
   return (
     <div className='w-full h-screen flex items-end'>
@@ -12,7 +12,7 @@ function Footer() {
             </h2>
         </div>
         <div className='absolute h-full pb-11 right-5 w-1/3 text-white flex flex-col justify-end items-end'>
-          <p>Terms of Use</p>
+          <NavLink to="/terms">Terms of Use</NavLink>
           <p>Privacy Policy</p>
           <p>Shipping & Returns</p>
         </div>
